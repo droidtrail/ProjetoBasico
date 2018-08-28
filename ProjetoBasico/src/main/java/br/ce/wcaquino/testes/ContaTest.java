@@ -7,7 +7,6 @@ import br.ce.wcaquino.core.BaseTest;
 import br.ce.wcaquino.pages.ContasPage;
 import br.ce.wcaquino.pages.MenuPage;
 
-
 //Herda de BaseTest as informações de login
 public class ContaTest extends BaseTest {
 
@@ -23,5 +22,16 @@ public class ContaTest extends BaseTest {
 		Assert.assertEquals("Conta adicionada com sucesso!", contasPage.obterMensagemSucesso());		
 	}
 	
+	@Test
+	public void testeAlterarConta() {
+		menuPage.acessarTelaListarConta();
+		
+		contasPage.ClicarAlterarConta("Conta do Teste alterada");
+		contasPage.setNome("Conta do Teste alterada 2");
+		contasPage.salvar();
+		
+		Assert.assertEquals("Conta alterada com sucesso!", contasPage.obterMensagemSucesso());
+		
+	}
 
 }
