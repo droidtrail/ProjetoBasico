@@ -1,5 +1,7 @@
 package br.ce.wcaquino.testes;
 
+import static br.ce.wcaquino.utils.DataUtils.obterDataFormatada;
+
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
@@ -23,8 +25,8 @@ public class MovimentacaoTeste extends BaseTest {
 		
 		menuPage.acessarTelaCriarMovimentacao();
 		
-		movPage.setDataMovimentacao("29/08/2018");
-		movPage.setDataPagamento("30/08/2018");
+		movPage.setDataMovimentacao(obterDataFormatada(new Date()));
+		movPage.setDataPagamento(obterDataFormatada(new Date()));
 		movPage.setDescricao("Movimentação Teste");
 		movPage.setInteressado("Interessado Qualquer");
 		movPage.setValor("500");
