@@ -9,7 +9,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import br.ce.wcaquino.core.BasePage;
-import br.ce.wcaquino.core.DriverFactory;
 
 public class MovimentacaoPage extends BasePage {
 
@@ -63,6 +62,11 @@ public class MovimentacaoPage extends BasePage {
 			retorno.add(erro.getText());
 		}
 		return retorno;
+	}
+	
+	public String obterMensagemMovimentacaoMaiorDataAtual() {
+		
+		return obterTexto(By.xpath(".//div[@class='alert alert-danger']/ul/li"));
 	}
 	
 }
