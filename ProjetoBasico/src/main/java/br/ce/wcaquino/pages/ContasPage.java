@@ -31,11 +31,24 @@ public class ContasPage extends BasePage {
 		return obterTexto(By.xpath(".//body/div[.='Já existe uma conta com esse nome!']"));
 
 	}
+	
+	public String obterMensagemContaEmUso() {
 
-	public void ClicarAlterarConta(String string) {
+		return obterTexto(By.xpath(".//body/div[.='Conta em uso na movimentações']"));
 
-		obterCelula("Conta", string, "Ações", "tabelaContas")
+	}
+
+	public void ClicarAlterarConta(String nomeConta) {
+
+		obterCelula("Conta", nomeConta, "Ações", "tabelaContas")
 				.findElement(By.xpath("//span[@class='glyphicon glyphicon-edit']")).click();
+
+	}
+	
+	public void ClicarExcluirConta(String nomeConta) {
+
+		obterCelula("Conta", nomeConta, "Ações", "tabelaContas")
+				.findElement(By.xpath("//span[@class='glyphicon glyphicon-remove-circle']")).click();
 
 	}
 }
