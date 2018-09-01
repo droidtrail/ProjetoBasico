@@ -7,7 +7,9 @@ import java.util.Date;
 import java.util.List;
 
 import org.junit.Assert;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
 import br.ce.wcaquino.core.BaseTest;
 import br.ce.wcaquino.pages.MenuPage;
@@ -15,13 +17,14 @@ import br.ce.wcaquino.pages.MovimentacaoPage;
 import br.ce.wcaquino.utils.DataUtils;
 
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class MovimentacaoTeste extends BaseTest {
 	
 	private MenuPage menuPage = new MenuPage();
 	private MovimentacaoPage movPage= new MovimentacaoPage();
 	
 	@Test
-	public void testeInserirMovimentacao() {
+	public void teste1_InserirMovimentacao() {
 		
 		menuPage.acessarTelaCriarMovimentacao();
 		
@@ -30,7 +33,7 @@ public class MovimentacaoTeste extends BaseTest {
 		movPage.setDescricao("Movimentação Teste");
 		movPage.setInteressado("Interessado Qualquer");
 		movPage.setValor("500");
-		movPage.setConta("Conta do Teste alterada 4");
+		movPage.setConta("Conta do Teste alterada");
 		movPage.setSituacaoPago();
 		movPage.clicarBotaoSalvar();
 		
@@ -38,7 +41,7 @@ public class MovimentacaoTeste extends BaseTest {
 	}
 	
 	@Test
-	public void testeCamposObrigatorios() {
+	public void teste2_CamposObrigatorios() {
 		
 		menuPage.acessarTelaCriarMovimentacao();
 		movPage.clicarBotaoSalvar();
@@ -63,7 +66,7 @@ public class MovimentacaoTeste extends BaseTest {
 	}
 	
 	@Test
-	public void TesteInserirMovimentacaoFuturo() {
+	public void Teste3_InserirMovimentacaoFuturo() {
 		
 		menuPage.acessarTelaCriarMovimentacao();
 		
@@ -74,7 +77,7 @@ public class MovimentacaoTeste extends BaseTest {
 		movPage.setDescricao("Movimentação Teste");
 		movPage.setInteressado("Interessado Qualquer");
 		movPage.setValor("500");
-		movPage.setConta("Conta do Teste alterada 4");
+		movPage.setConta("Conta do Teste alterada");
 		movPage.setSituacaoPago();
 		movPage.clicarBotaoSalvar();
 		
