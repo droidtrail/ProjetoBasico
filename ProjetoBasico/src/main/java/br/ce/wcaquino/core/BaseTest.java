@@ -8,27 +8,12 @@ import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
 import org.junit.After;
-import org.junit.Before;
 import org.junit.Rule;
 import org.junit.rules.TestName;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
-import br.ce.wcaquino.pages.LoginPage;
-
 public class BaseTest {
-	
-	private LoginPage page = new LoginPage();
-	
-	@Before
-	public void inicializa() {
-		
-		page.acessarTelaInicial();
-		page.setEmail("cursoselenium@gmail.com");
-		page.setSenha("123");
-		page.entrar();
-		
-	}
 	
 	@Rule
 	public TestName testname = new TestName();

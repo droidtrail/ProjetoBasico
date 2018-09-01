@@ -2,8 +2,6 @@ package br.ce.wcaquino.pages;
 
 import static br.ce.wcaquino.core.DriverFactory.getDriver;
 
-import org.openqa.selenium.By;
-
 import br.ce.wcaquino.core.BasePage;
 
 public class LoginPage extends BasePage {

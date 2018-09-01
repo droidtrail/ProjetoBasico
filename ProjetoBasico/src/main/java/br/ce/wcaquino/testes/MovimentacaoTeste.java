@@ -12,6 +12,7 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 import br.ce.wcaquino.core.BaseTest;
+import br.ce.wcaquino.core.Propriedades;
 import br.ce.wcaquino.pages.MenuPage;
 import br.ce.wcaquino.pages.MovimentacaoPage;
 import br.ce.wcaquino.utils.DataUtils;
@@ -33,7 +34,7 @@ public class MovimentacaoTeste extends BaseTest {
 		movPage.setDescricao("Movimentação Teste");
 		movPage.setInteressado("Interessado Qualquer");
 		movPage.setValor("500");
-		movPage.setConta("Conta do Teste alterada");
+		movPage.setConta(Propriedades.NOME_CONTA_ALTERADA);
 		movPage.setSituacaoPago();
 		movPage.clicarBotaoSalvar();
 		
@@ -77,7 +78,7 @@ public class MovimentacaoTeste extends BaseTest {
 		movPage.setDescricao("Movimentação Teste");
 		movPage.setInteressado("Interessado Qualquer");
 		movPage.setValor("500");
-		movPage.setConta("Conta do Teste alterada");
+		movPage.setConta(Propriedades.NOME_CONTA_ALTERADA);
 		movPage.setSituacaoPago();
 		movPage.clicarBotaoSalvar();
 		
