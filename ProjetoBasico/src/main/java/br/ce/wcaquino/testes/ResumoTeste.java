@@ -39,9 +39,13 @@ public class ResumoTeste extends BaseTest {
 		menuPage.acessarTelaResumo();
 
 		Assert.assertEquals("Seu Barriga - Extrato", getDriver().getTitle());
-	
-		List<WebElement> elementosEncontrados = getDriver().findElements(By.xpath(".//table[@id='tabelaExtrato']/tbody/tr"));
-		Assert.assertEquals(0, elementosEncontrados.size());	
+
+		resumoPage.selecionarAno("2016");
+		resumoPage.buscar();
+
+		List<WebElement> elementosEncontrados = getDriver()
+				.findElements(By.xpath(".//table[@id='tabelaExtrato']/tbody/tr"));
+		Assert.assertEquals(0, elementosEncontrados.size());
 	}
 
 }

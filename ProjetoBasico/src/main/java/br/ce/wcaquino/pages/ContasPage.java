@@ -16,10 +16,10 @@ public class ContasPage extends BasePage {
 
 	public String obterMensagemSucesso() {
 
-		return obterTexto(By.xpath(".//body/div[.='Conta adicionada com sucesso!']"));
+		return obterTexto(By.xpath("//div[@class='alert alert-success']"));
 
 	}
-	
+
 	public String obterMensagemAlteradaSucesso() {
 
 		return obterTexto(By.xpath(".//body/div[.='Conta alterada com sucesso!']"));
@@ -28,13 +28,7 @@ public class ContasPage extends BasePage {
 
 	public String obterMensagemErro() {
 
-		return obterTexto(By.xpath(".//body/div[.='Já existe uma conta com esse nome!']"));
-
-	}
-	
-	public String obterMensagemContaEmUso() {
-
-		return obterTexto(By.xpath(".//body/div[.='Conta em uso na movimentações']"));
+		return obterTexto(By.xpath("//div[@class='alert alert-danger']"));
 
 	}
 
@@ -44,11 +38,9 @@ public class ContasPage extends BasePage {
 				.findElement(By.xpath("//span[@class='glyphicon glyphicon-edit']")).click();
 
 	}
-	
-	public void ClicarExcluirConta(String nomeConta) {
 
-		obterCelula("Conta", nomeConta, "Ações", "tabelaContas")
-				.findElement(By.xpath("//span[@class='glyphicon glyphicon-remove-circle']")).click();
-
+	public void clicarExcluirConta(String string) {
+		obterCelula("Conta", string, "Ações", "tabelaContas")
+				.findElement(By.xpath(".//span[@class='glyphicon glyphicon-remove-circle']")).click();
 	}
 }
