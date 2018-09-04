@@ -198,20 +198,17 @@ public class BasePage {
 	/************** Tabela *******************/
 	public WebElement obterCelula(String colunaBusca, String valor, String colunaBotao, String idTabela) {
 
-		// Procurar coluna do registro
 		WebElement tabela = getDriver().findElement(By.xpath("//*[@id='"+idTabela+"']"));
-		List<WebElement> colunas = tabela.findElements(By.xpath(".//th"));
-
 		int idColuna = obterIndiceColuna(colunaBusca, tabela);
-
-		// Encontrar a linha do registro
+		
+		//encontrar a linha do registro
 		int idLinha = obterIndiceLinha(valor, tabela, idColuna);
-
-		// Procurar coluna do botão
+		
+		//procurar coluna do botao
 		int idColunaBotao = obterIndiceColuna(colunaBotao, tabela);
-
-		// Clicar no botão da célula encontrada
-		WebElement celula = tabela.findElement(By.xpath(".//tr[" + idLinha + "]/td[" + idColunaBotao + "]"));
+		
+		//clicar no botao da celula encontrada
+		WebElement celula = tabela.findElement(By.xpath(".//tr["+idLinha+"]/td["+idColunaBotao+"]"));
 		return celula;
 	}
 	
