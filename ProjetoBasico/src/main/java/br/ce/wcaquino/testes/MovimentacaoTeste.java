@@ -16,8 +16,6 @@ import br.ce.wcaquino.pages.MenuPage;
 import br.ce.wcaquino.pages.MovimentacaoPage;
 import br.ce.wcaquino.utils.DataUtils;
 
-
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class MovimentacaoTeste extends BaseTest {
 	
 	private MenuPage menuPage = new MenuPage();

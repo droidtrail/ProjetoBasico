@@ -15,7 +15,7 @@ import br.ce.wcaquino.core.BaseTest;
 import br.ce.wcaquino.pages.MenuPage;
 import br.ce.wcaquino.pages.ResumoPage;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+
 public class ResumoTeste extends BaseTest {
 
 	MenuPage menuPage = new MenuPage();

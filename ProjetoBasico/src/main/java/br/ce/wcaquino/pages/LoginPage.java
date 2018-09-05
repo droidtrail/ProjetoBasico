@@ -20,7 +20,10 @@ public class LoginPage extends BasePage {
 	
 	public void entrar() {
 		clicarBotaoPorTexto("Entrar");
-		//clicarBotao(By.xpath(".//button[.='Entrar']"));
+	}
+	
+	public void resetar() {
+		clicarLink("reset");
 	}
 
 }

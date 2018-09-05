@@ -10,7 +10,6 @@ import br.ce.wcaquino.pages.ContasPage;
 import br.ce.wcaquino.pages.MenuPage;
 
 //Herda de BaseTest as informações de login
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ContaTest extends BaseTest {
 
 	MenuPage   menuPage = new MenuPage();
