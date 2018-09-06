@@ -1,9 +1,7 @@
 package br.ce.wcaquino.testes;
 
 import org.junit.Assert;
-import org.junit.FixMethodOrder;
 import org.junit.Test;
-import org.junit.runners.MethodSorters;
 
 import br.ce.wcaquino.core.BaseTest;
 import br.ce.wcaquino.pages.ContasPage;
