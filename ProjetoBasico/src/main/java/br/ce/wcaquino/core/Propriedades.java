@@ -4,7 +4,7 @@ public class Propriedades {
 	
 	public static boolean FECHAR_BROWSER = true;
 	
-	public static Browsers BROWSER = Browsers.FIREFOX;
+	public static Browsers BROWSER = Browsers.CHROME;
 	
 	public static TipoExecucao TIPO_EXECUCAO = TipoExecucao.GRID;
 	
