@@ -41,9 +41,23 @@ public class DriverFactory {
 				case CHROME: cap = DesiredCapabilities.chrome(); break;
 			}
 			try {
-				driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap);
+				driver = new RemoteWebDriver(new URL("http://danifcordeiro:localhost:4444/wd/hub"), cap);
 			} catch (MalformedURLException e) {
 				System.err.println("Falha na conexão com o GRID");
+				e.printStackTrace();
+			}
+		}
+		
+		if(Propriedades.TIPO_EXECUCAO == TipoExecucao.NUVEM) {
+			DesiredCapabilities cap = null;
+			switch (Propriedades.BROWSER) {
+				case FIREFOX: cap = DesiredCapabilities.firefox(); break;
+				case CHROME: cap = DesiredCapabilities.chrome(); break;
+			}
+			try {
+				driver = new RemoteWebDriver(new URL("http://danifcordeiro:8e1e0fd5-deab-4fb3-ac07-5d387dbd1925@ondemand.saucelabs.com:80/wd/hub"), cap);
+			} catch (MalformedURLException e) {
+				System.err.println("Falha na conexão com a NUVEM");
 				e.printStackTrace();
 			}
 		}
